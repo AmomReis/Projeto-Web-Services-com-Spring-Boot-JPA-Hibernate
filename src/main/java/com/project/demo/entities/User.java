@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -11,6 +13,7 @@ import java.util.Objects;
 public class User implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,15 +22,18 @@ public class User implements Serializable {
     private String fone;
     private String senha;
 
-    public User(){
+    @OneToMany(mappedBy = "client")
+    private List<Order> orders = new ArrayList<>();
+
+    public User() {
     }
 
-    public User(String senha, String fone, String email, String name, Long id) {
-        this.senha = senha;
-        this.fone = fone;
-        this.email = email;
-        this.name = name;
+    public User(Long id, String name, String email, String fone, String senha) {
         this.id = id;
+        this.name = name;
+        this.email = email;
+        this.fone = fone;
+        this.senha = senha;
     }
 
     public Long getId() {
@@ -66,6 +72,10 @@ public class User implements Serializable {
         this.senha = senha;
     }
 
+    public List<Order> getOrders() {
+        return orders;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -77,4 +87,6 @@ public class User implements Serializable {
     public int hashCode() {
         return Objects.hashCode(id);
     }
+
+
 }
