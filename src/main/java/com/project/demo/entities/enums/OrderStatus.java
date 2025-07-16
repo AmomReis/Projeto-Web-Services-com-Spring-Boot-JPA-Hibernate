@@ -1,4 +1,4 @@
-package com.project.demo.enums;
+package com.project.demo.entities.enums;
 
 public enum OrderStatus {
 

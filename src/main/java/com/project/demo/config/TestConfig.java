@@ -4,7 +4,7 @@ import com.project.demo.entities.Category;
 import com.project.demo.entities.Order;
 import com.project.demo.entities.Product;
 import com.project.demo.entities.User;
-import com.project.demo.enums.OrderStatus;
+import com.project.demo.entities.enums.OrderStatus;
 import com.project.demo.repositories.CategoryRepository;
 import com.project.demo.repositories.OrderRepository;
 import com.project.demo.repositories.ProductRepository;
