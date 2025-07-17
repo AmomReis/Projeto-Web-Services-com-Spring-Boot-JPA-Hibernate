@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "tb_product")
@@ -84,11 +85,9 @@ public class Product implements Serializable {
 
     @JsonIgnore
     public Set<Order> getOrders() {
-        Set<Order> set = new HashSet<>();
-        for (OrderItem x : items) {
-            set.add(x.getOrder());
-        }
-        return set;
+        return items.stream()
+                .map(OrderItem::getOrder)
+                .collect(Collectors.toSet());
     }
 
     @Override
