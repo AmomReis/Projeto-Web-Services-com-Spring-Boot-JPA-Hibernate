@@ -89,7 +89,7 @@ public class Order implements Serializable {
 
     public Double getTotal() {
         return items.stream()
-                    .mapToDouble(x -> x.getSubTotal())
+                    .mapToDouble(OrderItem::getSubTotal)
                     .sum();
     }
 
