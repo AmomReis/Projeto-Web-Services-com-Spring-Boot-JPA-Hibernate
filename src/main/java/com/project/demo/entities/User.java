@@ -20,8 +20,8 @@ public class User implements Serializable {
     private Long id;
     private String name;
     private String email;
-    private String fone;
-    private String senha;
+    private String phone;
+    private String password;
 
     @JsonIgnore
     @OneToMany(mappedBy = "client")
@@ -30,12 +30,12 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(Long id, String name, String email, String fone, String senha) {
+    public User(Long id, String name, String email, String phone, String password) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.fone = fone;
-        this.senha = senha;
+        this.phone = phone;
+        this.password = password;
     }
 
     public Long getId() {
@@ -58,20 +58,20 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public String getFone() {
-        return fone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setFone(String fone) {
-        this.fone = fone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public List<Order> getOrders() {
