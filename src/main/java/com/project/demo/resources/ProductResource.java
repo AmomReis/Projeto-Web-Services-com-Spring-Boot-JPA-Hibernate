@@ -1,6 +1,6 @@
 package com.project.demo.resources;
 
-import com.project.demo.entities.Product;
+import com.project.demo.model.Product;
 import com.project.demo.services.ProductServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,8 @@
 package com.project.demo.services;
 
-import com.project.demo.entities.Category;
+import com.project.demo.model.Category;
 import com.project.demo.repositories.CategoryRepository;
+import com.project.demo.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ public class CategoryServices {
     }
 
     public Category findById(Long id) {
-        Optional<Category> obj = repository.findById(id);
-        return obj.get();
+        return repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException(id));
     }
 }

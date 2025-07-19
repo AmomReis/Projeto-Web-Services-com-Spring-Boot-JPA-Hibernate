@@ -1,13 +1,12 @@
 package com.project.demo.services;
 
-import com.project.demo.entities.User;
+import com.project.demo.model.User;
 import com.project.demo.repositories.UserRepository;
 import com.project.demo.services.exceptions.DatabaseException;
 import com.project.demo.services.exceptions.ResourceNotFoundException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,8 +23,8 @@ public class UserServices {
     }
 
     public User findById(Long id) {
-        Optional<User> obj = repository.findById(id);
-        return obj.orElseThrow(() -> new ResourceNotFoundException(id));
+        return repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException(id));
     }
 
     public User insert(User obj) {

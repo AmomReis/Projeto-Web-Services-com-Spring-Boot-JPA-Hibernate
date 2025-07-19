@@ -1,7 +1,7 @@
-package com.project.demo.entities;
+package com.project.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.project.demo.entities.pk.OrderItemPK;
+import com.project.demo.model.pk.OrderItemPK;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

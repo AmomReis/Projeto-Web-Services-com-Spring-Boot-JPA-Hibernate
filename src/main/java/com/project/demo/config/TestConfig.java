@@ -1,7 +1,7 @@
 package com.project.demo.config;
 
-import com.project.demo.entities.*;
-import com.project.demo.entities.enums.OrderStatus;
+import com.project.demo.model.*;
+import com.project.demo.model.enums.OrderStatus;
 import com.project.demo.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

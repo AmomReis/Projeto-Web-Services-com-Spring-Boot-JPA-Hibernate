@@ -1,6 +1,6 @@
 package com.project.demo.resources;
 
-import com.project.demo.entities.Order;
+import com.project.demo.model.Order;
 import com.project.demo.services.OrderServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

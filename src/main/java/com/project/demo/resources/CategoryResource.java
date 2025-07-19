@@ -1,6 +1,6 @@
 package com.project.demo.resources;
 
-import com.project.demo.entities.Category;
+import com.project.demo.model.Category;
 import com.project.demo.services.CategoryServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

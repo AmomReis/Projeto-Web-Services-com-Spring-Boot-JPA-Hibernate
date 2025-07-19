@@ -1,6 +1,6 @@
 package com.project.demo.resources;
 
-import com.project.demo.entities.User;
+import com.project.demo.model.User;
 import com.project.demo.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

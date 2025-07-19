@@ -1,7 +1,7 @@
-package com.project.demo.entities;
+package com.project.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.project.demo.entities.enums.OrderStatus;
+import com.project.demo.model.enums.OrderStatus;
 import jakarta.persistence.*;
 
 import java.io.Serializable;

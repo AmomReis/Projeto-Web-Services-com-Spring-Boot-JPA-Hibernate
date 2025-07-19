@@ -1,7 +1,7 @@
-package com.project.demo.entities.pk;
+package com.project.demo.model.pk;
 
-import com.project.demo.entities.Order;
-import com.project.demo.entities.Product;
+import com.project.demo.model.Order;
+import com.project.demo.model.Product;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;

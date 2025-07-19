@@ -1,7 +1,8 @@
 package com.project.demo.services;
 
-import com.project.demo.entities.Order;
+import com.project.demo.model.Order;
 import com.project.demo.repositories.OrderRepository;
+import com.project.demo.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ public class OrderServices {
     }
 
     public Order findById(Long id) {
-        Optional<Order> obj = repository.findById(id);
-        return obj.get();
+        return repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException(id));
     }
 }
