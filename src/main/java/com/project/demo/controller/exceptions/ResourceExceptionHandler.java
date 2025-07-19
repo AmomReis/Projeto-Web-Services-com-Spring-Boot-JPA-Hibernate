@@ -1,4 +1,4 @@
-package com.project.demo.resources.exceptions;
+package com.project.demo.controller.exceptions;
 
 import com.project.demo.services.exceptions.DatabaseException;
 import com.project.demo.services.exceptions.ResourceNotFoundException;

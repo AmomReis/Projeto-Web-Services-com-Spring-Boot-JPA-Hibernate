@@ -1,4 +1,4 @@
-package com.project.demo.resources;
+package com.project.demo.controller;
 
 import com.project.demo.model.Category;
 import com.project.demo.services.CategoryServices;

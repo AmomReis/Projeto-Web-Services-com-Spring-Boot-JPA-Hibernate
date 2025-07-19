@@ -1,4 +1,4 @@
-package com.project.demo.resources;
+package com.project.demo.controller;
 
 import com.project.demo.model.Order;
 import com.project.demo.services.OrderServices;

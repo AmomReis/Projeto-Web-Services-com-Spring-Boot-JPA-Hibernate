@@ -1,4 +1,4 @@
-package com.project.demo.resources;
+package com.project.demo.controller;
 
 import com.project.demo.model.User;
 import com.project.demo.services.UserServices;

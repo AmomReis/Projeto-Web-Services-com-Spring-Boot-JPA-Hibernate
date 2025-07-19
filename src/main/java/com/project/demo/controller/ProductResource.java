@@ -1,4 +1,4 @@
-package com.project.demo.resources;
+package com.project.demo.controller;
 
 import com.project.demo.model.Product;
 import com.project.demo.services.ProductServices;
